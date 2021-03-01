@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap');
+
+$title_font: 'Merriweather Sans', sans-serif;
+$content_font: 'Mukta', sans-serif;
+$layout_extra_small_devices: 576px;
+$layout_small_devices: 767px;
+$layout_large_devices: 768px;
+$layout_extra_large_devices: 1200px;
+
+@mixin mobile {
+    @media only screen and (max-width: #{$layout_extra_small_devices}) {
+        @content;
+    }
+}
+
+@mixin landscape-mobile{
+    @media only screen and (min-width: #{$layout_extra_small_devices}) and (max-width: #{$layout_small_devices}){
+        @content;
+    }
+}
+
+@mixin tablets{
+    @media only screen and (min-width: #{$layout_large_devices}) and (max-width: #{$layout_extra_large_devices}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media only screen and (min-width: #{$layout_extra_large_devices}){
+        @content;
+    }
+}
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-center-column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+%title-font {
+    h2 {  
+        font-family: $title_font;
+        font-size: 22px;
+        margin-left: 10px;
+    }
+}
+
+%paragraph-font {
+    p {
+        font-family: $content_font;
+        font-size: 20px;
+    }
+} 
+
+@keyframes FadeInOut {
+    0%, 100% { background-image: url('../img/Animation/Portia1.svg'); }
+    20% { background-image: url('../img/Animation/Portia2.svg'); }
+    40% { background-image: url('../img/Animation/Portia3.svg'); }
+    60% { background-image: url('../img/Animation/Portia4.svg'); }
+    80% { background-image: url('../img/Animation/Portia5.svg'); }
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    &__container { 
+        @extend %flex-row;
+        justify-content: center;
+        background-color: rgba(193, 232, 248, 0.3);
+
+        .header__logo {
+            width: 39%;
+            height: 100%;
+            padding: 5px;
+
+            @include tablets {
+                height: 150px;
+            }
+
+            @include desktop {
+                height: 150px;
+            }
+        }
+    }
+}
+
+.nav {
+    &__container {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        
+        .nav__menu {
+            font-family: $title_font;
+            color: black;
+            padding: 4px;
+            text-decoration: none;
+            font-size: 18px;
+
+            @include landscape-mobile {
+                font-size: 19px;
+            }
+
+            @include tablets {
+                font-size: 21px;
+            }
+
+            @include desktop {
+                font-size: 22px;
+            }
+
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.5s ease-out;
+        }
+
+        .nav__menu--transition:hover {
+            color:grey;
+            border-bottom-color: grey;
+        }
+    }
+}
+
+.main {
+    @extend %title-font, %paragraph-font;
+
+    &__animation {  
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        animation: FadeInOut infinite 30s;
+        width: 100%;
+
+        @include mobile {
+            height: 200px;
+        }
+
+        @include landscape-mobile {
+            height: 250px;
+        }
+
+        @include tablets {
+            height: 300px;
+        }
+
+        @include desktop {
+            height: 350px;
+        }
+    }
+
+    &__game {
+        .main__game-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            
+            .main__iframe {
+                border: 0px;
+
+                @include mobile{   
+                    width:  95%;              
+                    height: 18rem;
+                }
+
+                @include landscape-mobile {
+                    width: 35rem;
+                    height: 22rem;
+                }
+
+                @include tablets {
+                    width: 46rem;
+                    height: 26rem;
+                }
+
+                @include desktop {
+                    width: 60rem;
+                    height: 34rem;
+                }
+            }
+
+            .main__paragraph {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__characters {
+        .main__characters-container {
+            @extend %flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .main__character {
+                @extend %flex-center-column, %paragraph-font;
+                padding-left: 5px;
+                padding-right: 5px;
+
+                p {
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__requirements {
+        .main__requirements-container {
+            @extend %flex-center-column, %paragraph-font;
+
+            .main__recommended {   
+                margin-top: 30px;
+            }
+
+            .main__bold-word {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__platforms {
+        .main__platforms-container {
+            @extend %flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 25px;
+            margin-bottom: 30px;
+
+            .main__platform {
+                width: 120%;
+                height: 100%;
+
+                @include tablets {
+                    width: 140%;
+                }
+
+                @include desktop {
+                    width: 170%;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: rgb(235, 231, 231);
+
+    &__follow {
+        font-family: $content_font;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(0,0,0);
+        padding-top: 15px;
+        margin-left: 10px;
+    }
+
+    &__social-media {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 25px;
+
+        .fab {
+            color: black;
+            font-size: 2rem;
+
+            @include tablets {
+                font-size: 2.25rem;
+            }
+
+            @include desktop {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+
+
+

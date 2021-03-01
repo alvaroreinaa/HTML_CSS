@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap");
+.header__container, .nav__container, .main__characters .main__characters-container, .main__platforms .main__platforms-container, .footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main__characters .main__characters-container .main__character, .main__requirements .main__requirements-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.main h2 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.main p, .main__characters .main__characters-container .main__character p, .main__requirements .main__requirements-container p {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+}
+
+@-webkit-keyframes FadeInOut {
+  0%, 100% {
+    background-image: url("../img/Animation/Portia1.svg");
+  }
+  20% {
+    background-image: url("../img/Animation/Portia2.svg");
+  }
+  40% {
+    background-image: url("../img/Animation/Portia3.svg");
+  }
+  60% {
+    background-image: url("../img/Animation/Portia4.svg");
+  }
+  80% {
+    background-image: url("../img/Animation/Portia5.svg");
+  }
+}
+
+@keyframes FadeInOut {
+  0%, 100% {
+    background-image: url("../img/Animation/Portia1.svg");
+  }
+  20% {
+    background-image: url("../img/Animation/Portia2.svg");
+  }
+  40% {
+    background-image: url("../img/Animation/Portia3.svg");
+  }
+  60% {
+    background-image: url("../img/Animation/Portia4.svg");
+  }
+  80% {
+    background-image: url("../img/Animation/Portia5.svg");
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.header__container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(193, 232, 248, 0.3);
+}
+
+.header__container .header__logo {
+  width: 39%;
+  height: 100%;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .header__container .header__logo {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__container .header__logo {
+    height: 150px;
+  }
+}
+
+.nav__container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.nav__container .nav__menu {
+  font-family: "Merriweather Sans", sans-serif;
+  color: black;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom-color 0.5s ease-out;
+  transition: border-bottom-color 0.5s ease-out;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nav__container .nav__menu {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav__container .nav__menu {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav__container .nav__menu {
+    font-size: 22px;
+  }
+}
+
+.nav__container .nav__menu--transition:hover {
+  color: grey;
+  border-bottom-color: grey;
+}
+
+.main__animation {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  -webkit-animation: FadeInOut infinite 30s;
+          animation: FadeInOut infinite 30s;
+  width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .main__animation {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__animation {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__animation {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__animation {
+    height: 350px;
+  }
+}
+
+.main__game .main__game-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__game .main__game-container .main__iframe {
+  border: 0px;
+}
+
+@media only screen and (max-width: 576px) {
+  .main__game .main__game-container .main__iframe {
+    width: 95%;
+    height: 18rem;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__game .main__game-container .main__iframe {
+    width: 35rem;
+    height: 22rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__game .main__game-container .main__iframe {
+    width: 46rem;
+    height: 26rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__game .main__game-container .main__iframe {
+    width: 60rem;
+    height: 34rem;
+  }
+}
+
+.main__game .main__game-container .main__paragraph {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.main__characters .main__characters-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main__characters .main__characters-container .main__character {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.main__characters .main__characters-container .main__character p {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.main__requirements .main__requirements-container .main__recommended {
+  margin-top: 30px;
+}
+
+.main__requirements .main__requirements-container .main__bold-word {
+  font-weight: bold;
+}
+
+.main__platforms .main__platforms-container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.main__platforms .main__platforms-container .main__platform {
+  width: 120%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__platforms .main__platforms-container .main__platform {
+    width: 140%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__platforms .main__platforms-container .main__platform {
+    width: 170%;
+  }
+}
+
+.footer {
+  background-color: #ebe7e7;
+}
+
+.footer__follow {
+  font-family: "Mukta", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  padding-top: 15px;
+  margin-left: 10px;
+}
+
+.footer__social-media {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 25px;
+}
+
+.footer__social-media .fab {
+  color: black;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__social-media .fab {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__social-media .fab {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
