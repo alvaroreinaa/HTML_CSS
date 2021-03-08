@@ -75,19 +75,19 @@ body {
         @extend %flex-row;
         justify-content: center;
         background-color: rgba(193, 232, 248, 0.3);
+    }
 
-        .header__logo {
-            width: 39%;
-            height: 100%;
-            padding: 5px;
+    &__logo {
+        width: 39%;
+        height: 100%;
+        padding: 5px;
 
-            @include tablets {
-                height: 150px;
-            }
+        @include tablets {
+            height: 150px;
+        }
 
-            @include desktop {
-                height: 150px;
-            }
+        @include desktop {
+            height: 150px;
         }
     }
 }
@@ -101,31 +101,32 @@ body {
         margin-right: 10px;
         margin-top: 15px;
         margin-bottom: 20px;
-        
-        .nav__menu {
-            font-family: $title_font;
-            color: black;
-            padding: 4px;
-            text-decoration: none;
-            font-size: 18px;
+    }
 
-            @include landscape-mobile {
-                font-size: 19px;
-            }
+    &__menu {
+        font-family: $title_font;
+        color: black;
+        padding: 4px;
+        text-decoration: none;
+        font-size: 18px;
 
-            @include tablets {
-                font-size: 21px;
-            }
-
-            @include desktop {
-                font-size: 22px;
-            }
-
-            border-bottom: 2px solid transparent;
-            transition: border-bottom-color 0.5s ease-out;
+        @include landscape-mobile {
+            font-size: 19px;
         }
 
-        .nav__menu--transition:hover {
+        @include tablets {
+            font-size: 21px;
+        }
+
+        @include desktop {
+            font-size: 22px;
+        }
+
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.5s ease-out;
+
+        
+        &--transition:hover {
             color:grey;
             border-bottom-color: grey;
         }
@@ -158,98 +159,90 @@ body {
             height: 350px;
         }
     }
+    
+    &__game-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
-    &__game {
-        .main__game-container {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            
-            .main__iframe {
-                border: 0px;
+    &__game-iframe {
+        border: 0px;
 
-                @include mobile{   
-                    width:  95%;              
-                    height: 18rem;
-                }
+        @include mobile{   
+            width:  95%;              
+            height: 18rem;
+        }
 
-                @include landscape-mobile {
-                    width: 35rem;
-                    height: 22rem;
-                }
+        @include landscape-mobile {
+            width: 35rem;
+            height: 22rem;
+        }
 
-                @include tablets {
-                    width: 46rem;
-                    height: 26rem;
-                }
+        @include tablets {
+            width: 46rem;
+            height: 26rem;
+        }
 
-                @include desktop {
-                    width: 60rem;
-                    height: 34rem;
-                }
-            }
-
-            .main__paragraph {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
+        @include desktop {
+            width: 60rem;
+            height: 34rem;
         }
     }
 
-    &__characters {
-        .main__characters-container {
-            @extend %flex-row;
-            flex-wrap: wrap;
-            justify-content: space-around;
+    &__game-paragraph {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    &__characters-container {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-            .main__character {
-                @extend %flex-center-column, %paragraph-font;
-                padding-left: 5px;
-                padding-right: 5px;
+    &__character {
+        @extend %flex-center-column, %paragraph-font;
+        padding-left: 5px;
+        padding-right: 5px;
 
-                p {
-                    margin-top: 5px;
-                    font-weight: bold;
-                }
-            }
+        p {
+            margin-top: 5px;
+            font-weight: bold;
         }
     }
 
-    &__requirements {
-        .main__requirements-container {
-            @extend %flex-center-column, %paragraph-font;
-
-            .main__recommended {   
-                margin-top: 30px;
-            }
-
-            .main__bold-word {
-                font-weight: bold;
-            }
-        }
+    &__requirements-container {
+        @extend %flex-center-column, %paragraph-font;
     }
 
-    &__platforms {
-        .main__platforms-container {
-            @extend %flex-row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 25px;
-            margin-bottom: 30px;
+    &__recommended {   
+        margin-top: 30px;
+    }
 
-            .main__platform {
-                width: 120%;
-                height: 100%;
+    &__bold-word {
+        font-weight: bold;
+    }
 
-                @include tablets {
-                    width: 140%;
-                }
+    &__platforms-container {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
 
-                @include desktop {
-                    width: 170%;
-                }
-            }
+    &__platform {
+        width: 120%;
+        height: 100%;
+
+        @include tablets {
+            width: 140%;
+        }
+
+        @include desktop {
+            width: 170%;
         }
     }
 }
@@ -286,7 +279,3 @@ body {
         }
     }
 }
-
-
-
-

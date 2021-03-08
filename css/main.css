@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap");
-.header__container, .nav__container, .main__characters .main__characters-container, .main__platforms .main__platforms-container, .footer__social-media {
+.header__container, .nav__container, .main__characters-container, .main__platforms-container, .footer__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +9,7 @@
           flex-direction: row;
 }
 
-.main__characters .main__characters-container .main__character, .main__requirements .main__requirements-container {
+.main__character, .main__requirements-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -29,7 +29,7 @@
   margin-left: 10px;
 }
 
-.main p, .main__characters .main__characters-container .main__character p, .main__requirements .main__requirements-container p {
+.main p, .main__character p, .main__requirements-container p {
   font-family: "Mukta", sans-serif;
   font-size: 20px;
 }
@@ -81,20 +81,20 @@ body {
   background-color: rgba(193, 232, 248, 0.3);
 }
 
-.header__container .header__logo {
+.header__logo {
   width: 39%;
   height: 100%;
   padding: 5px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .header__container .header__logo {
+  .header__logo {
     height: 150px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .header__container .header__logo {
+  .header__logo {
     height: 150px;
   }
 }
@@ -110,7 +110,7 @@ body {
   margin-bottom: 20px;
 }
 
-.nav__container .nav__menu {
+.nav__menu {
   font-family: "Merriweather Sans", sans-serif;
   color: black;
   padding: 4px;
@@ -122,24 +122,24 @@ body {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .nav__container .nav__menu {
+  .nav__menu {
     font-size: 19px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .nav__container .nav__menu {
+  .nav__menu {
     font-size: 21px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .nav__container .nav__menu {
+  .nav__menu {
     font-size: 22px;
   }
 }
 
-.nav__container .nav__menu--transition:hover {
+.nav__menu--transition:hover {
   color: grey;
   border-bottom-color: grey;
 }
@@ -177,7 +177,7 @@ body {
   }
 }
 
-.main__game .main__game-container {
+.main__game-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,69 +192,69 @@ body {
           align-items: center;
 }
 
-.main__game .main__game-container .main__iframe {
+.main__game-iframe {
   border: 0px;
 }
 
 @media only screen and (max-width: 576px) {
-  .main__game .main__game-container .main__iframe {
+  .main__game-iframe {
     width: 95%;
     height: 18rem;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__game .main__game-container .main__iframe {
+  .main__game-iframe {
     width: 35rem;
     height: 22rem;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__game .main__game-container .main__iframe {
+  .main__game-iframe {
     width: 46rem;
     height: 26rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__game .main__game-container .main__iframe {
+  .main__game-iframe {
     width: 60rem;
     height: 34rem;
   }
 }
 
-.main__game .main__game-container .main__paragraph {
+.main__game-paragraph {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.main__characters .main__characters-container {
+.main__characters-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.main__characters .main__characters-container .main__character {
+.main__character {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.main__characters .main__characters-container .main__character p {
+.main__character p {
   margin-top: 5px;
   font-weight: bold;
 }
 
-.main__requirements .main__requirements-container .main__recommended {
+.main__recommended {
   margin-top: 30px;
 }
 
-.main__requirements .main__requirements-container .main__bold-word {
+.main__bold-word {
   font-weight: bold;
 }
 
-.main__platforms .main__platforms-container {
+.main__platforms-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -263,19 +263,19 @@ body {
   margin-bottom: 30px;
 }
 
-.main__platforms .main__platforms-container .main__platform {
+.main__platform {
   width: 120%;
   height: 100%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__platforms .main__platforms-container .main__platform {
+  .main__platform {
     width: 140%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__platforms .main__platforms-container .main__platform {
+  .main__platform {
     width: 170%;
   }
 }
